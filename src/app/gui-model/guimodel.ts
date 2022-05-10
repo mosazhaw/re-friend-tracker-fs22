@@ -138,6 +138,13 @@ export class GuiModel {
                             "color": "yellow",
                             "page": "locationspage",
                         },
+                        {
+                            "type": "button",
+                            "name": "Location",
+                            "icon": "fa-user",
+                            "color": "blue",
+                            "page": "friendspage",
+                        },
                     ]
                 },
                 {
