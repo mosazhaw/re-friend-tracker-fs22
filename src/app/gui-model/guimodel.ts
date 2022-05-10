@@ -140,7 +140,14 @@ export class GuiModel {
                         },
                         {
                             "type": "button",
-                            "name": "Location",
+                            "name": "Group",
+                            "icon": "fa-user",
+                            "color": "blue",
+                            "page": "friendspage",
+                        },
+                        {
+                            "type": "button",
+                            "name": "Activity",
                             "icon": "fa-user",
                             "color": "blue",
                             "page": "friendspage",
