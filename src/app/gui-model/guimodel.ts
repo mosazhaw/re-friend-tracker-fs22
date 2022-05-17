@@ -28,6 +28,13 @@ export class GuiModel {
                             "required": true
                         },
                         {
+                            "id": "nickname",
+                            "type": "text",
+                            "name": "Nickname",
+                            "width": 1,
+                            "required": true
+                        },
+                        {
                             "id":   "location",
                             "type": "autocomplete",
                             "name": "Location",
@@ -36,9 +43,57 @@ export class GuiModel {
                             "width": 2
                         },
                         {
+                            "id":   "group",
+                            "type": "autocomplete",
+                            "name": "Group",
+                            "url": "/group",
+                            "form": "GroupForm",
+                            "width": 2
+                        },
+                        {
                             "id": "birthdate",
                             "type": "date",
                             "name": "Birthday",
+                            "width": 2
+                        },
+                        {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "GroupForm",
+                    "title": "Group",
+                    "url": "/group",
+                    "formFieldList": [
+                        {
+                            "id": "name",
+                            "type": "text",
+                            "name": "GroupName",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "id": "creationDate",
+                            "type": "date",
+                            "name": "CreationDate",
                             "width": 2
                         },
                         {
@@ -141,15 +196,15 @@ export class GuiModel {
                         {
                             "type": "button",
                             "name": "Group",
-                            "icon": "fa-user",
-                            "color": "blue",
-                            "page": "friendspage",
+                            "icon": "fa-layer-group",
+                            "color": "carrot",
+                            "page": "groupspage",
                         },
                         {
                             "type": "button",
                             "name": "Activity",
                             "icon": "fa-user",
-                            "color": "blue",
+                            "color": "purple",
                             "page": "friendspage",
                         },
                     ]
@@ -177,6 +232,33 @@ export class GuiModel {
                             "url": "/friend",
                             "form": {
                                 "form": "FriendForm"
+                            }
+                        },
+                    ]
+                },
+                {
+                    "id": "groupspage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "NewGroup",
+                            "icon": "fa-layer-group",
+                            "color": "green",
+                            "form": {
+                                "form": "GroupForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-layer-group",
+                            "color": "carrot",
+                            "search": true,
+                            "url": "/group",
+                            "form": {
+                                "form": "GroupForm"
                             }
                         },
                     ]
